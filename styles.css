@@ -1,0 +1,106 @@
+@font-face {
+    font-family: Notulen;
+    src: url(./fonts/FreeNotulenSerifDisplay-ExtBd.woff);
+}
+
+:root {
+    --sec-clr-brick: #dd3922;
+    --prim-clr-darkgreen: #003a42;
+
+    --ff-prim: Notulen;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background: var(--prim-clr-darkgreen);
+    position: relative;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.kactus-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.form {
+    transform-origin: 50% 50%;
+    transform: translate(80%, 2%);
+}
+
+.hamburger-menu {
+    position: fixed;
+    right: 2em;
+    top: 2em;
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.hamburger-menu span {
+    width: clamp(2em, 3vw, 5em);
+    height: 0.5em;
+    border-radius: 1em;
+    background: var(--sec-clr-brick);
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.nav-item a {
+    text-decoration: none;
+    font-family: var(--ff-prim);
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-item h2 {
+    font-size: clamp(3rem, 10vw, 12rem);
+    color: var(--sec-clr-brick);
+}
+.nav-item h2:hover {
+    -webkit-text-stroke: 2px var(--sec-clr-brick);
+    color: transparent;
+}
+.nav-item .heading {
+    overflow: hidden;
+}
+
+.selected {
+    width: 7em;
+}
+.pik {
+    transform: scale(1.2);
+    visibility: hidden;
+}
+.leaf-cactus {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.top, .bottom {
+    transform-origin: 50% 50%;
+}
+
